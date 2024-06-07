@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /back-office/
+Disallow: /back-office/dashboard/
+Disallow: /back-office/banner/
+Disallow: /back-office/carousel/
+Disallow: /back-office/about/
+Disallow: /back-office/contact/
+Disallow: /back-office/service/
+Disallow: /back-office/client/
+Disallow: /back-office/director/
+Allow: /
