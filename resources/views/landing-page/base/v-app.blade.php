@@ -26,8 +26,7 @@
     @include('landing-page.components.v-footer')
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-square rounded-circle back-to-top"><i
-            class="fa fa-arrow-up text-white"></i></a>
+    <a href="#" class="btn btn-primary btn-square rounded-circle back-to-top"><i class="fa fa-arrow-up text-white"></i></a>
 
     @include('landing-page.components.v-script')
 </body>
