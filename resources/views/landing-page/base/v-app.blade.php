@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content=" Satria Global Solusi adalah perusahaan yang berpengalaman dalam membantu layanan perizinan untuk mendukung korporasi kegiatan usaha sesuai dengan peraturan pemerintah dan hukum yang berlaku di Republik Indonesia">
-    <meta name="keywords" content="sgscglobalconsultant, Satria, Global, Solusi">
+    <meta name="description" content="Satria Global Solusi adalah perusahaan yang berpengalaman dalam membantu layanan perizinan untuk mendukung korporasi kegiatan usaha sesuai dengan peraturan pemerintah dan hukum yang berlaku di Republik Indonesia - sgs globa consultant">
+    <meta name="keywords" content="sgscglobalconsultant, satria, global, solusi, sgs, global, consultant">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Satria Global Solusi">
-    <meta property="og:description" content="perusahaan yang berpengalaman dalam membantu layanan perizinan untuk mendukung korporasi kegiatan usaha sesuai dengan peraturan pemerintah dan hukum yang berlaku di Republik Indonesia">
+    <meta property="og:description" content="perusahaan yang berpengalaman dalam membantu layanan perizinan untuk mendukung korporasi kegiatan usaha sesuai dengan peraturan pemerintah dan hukum yang berlaku di Republik Indonesia - sgs globa consultant">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="URL_GAMBAR">
-    <title>SGS - Company Profile / {{ $title ?? config('app.name') }}</title>
+    <title>SGS Global Consultant | Satria Global Solusi - Company Profile / {{ $title ?? config('app.name') }}</title>
     @include('landing-page.components.v-head')
 </head>
 
