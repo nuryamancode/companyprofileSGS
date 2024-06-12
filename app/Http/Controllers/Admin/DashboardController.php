@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutModel;
+use App\Models\ArtikelModel;
 use App\Models\BannerModel;
 use App\Models\CarouselModel;
 use App\Models\ClientModel;
@@ -25,8 +26,10 @@ class DashboardController extends Controller
         $jumlahdirector = DirectorModel::count();
         $jumlahservice = ServiceModel::count();
         $jumlahclient = ClientModel::count();
+        $jumlahartikel = ArtikelModel::count();
         $data = [
             'jumlahservice' => $jumlahservice,
+            'jumlahartikel' => $jumlahartikel,
             'jumlahclient' => $jumlahclient,
             'jumlahbanner' => $jumlahbanner,
             'jumlahcarousel' => $jumlahcarousel,

@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="shortcut icon" href="{{ asset('assets/img/SGSS.png') }}">
     <meta name="description" content="Satria Global Solusi adalah perusahaan yang berpengalaman dalam membantu layanan perizinan untuk mendukung korporasi kegiatan usaha sesuai dengan peraturan pemerintah dan hukum yang berlaku di Republik Indonesia - sgs globa consultant">
     <meta name="keywords" content="sgscglobalconsultant, satria, global, solusi, sgs, global, consultant">
     <meta name="robots" content="index, follow">

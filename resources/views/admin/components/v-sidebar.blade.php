@@ -13,6 +13,12 @@
                 </a>
             </li>
             <li class="menu-header">Content</li>
+            <li class="{{ Str::startsWith(request()->path(), 'back-office/artikel') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.artikel.index') }}">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Article</span>
+                </a>
+            </li>
             <li class="{{ Str::startsWith(request()->path(), 'back-office/banner') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.banner.index') }}">
                     <i class="fas fa-image"></i>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <link rel="shortcut icon" href="{{ asset('assets/img/SGSS.png') }}">
     <title>SGS Global Consultant | Satria Global Solusi - BackOffice / {{ $title ?? config('app.name') }}</title>
 
     @include('admin.components.v-head')

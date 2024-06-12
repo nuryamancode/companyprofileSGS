@@ -39,6 +39,10 @@ Route::controller(\App\Http\Controllers\User\ServiceController::class)->group(fu
 Route::controller(\App\Http\Controllers\User\AboutController::class)->group(function () {
     Route::get('/abouts', 'index')->name('about');
 });
+Route::controller(\App\Http\Controllers\User\ArticleController::class)->group(function () {
+    Route::get('/articles', 'index')->name('article');
+    Route::get('/articles/{id}/detail', 'show')->name('article.detail');
+});
 Route::controller(\App\Http\Controllers\User\ContactController::class)->group(function () {
     Route::get('/contact', 'index')->name('contact');
     Route::post('/contact/send', 'send')->name('contact.send');
@@ -76,6 +80,9 @@ Route::middleware('auth')->group(function () {
 
         Route::resource('/back-office/director', \App\Http\Controllers\Admin\DirectorController::class);
         Route::get('/back-office/director/{id}/delete', [\App\Http\Controllers\Admin\DirectorController::class , 'destroy'])->name('director.delete');
+
+        Route::resource('/back-office/artikel', \App\Http\Controllers\Admin\ArtikelController::class);
+        Route::get('/back-office/artikel/{id}/delete', [\App\Http\Controllers\Admin\ArtikelController::class , 'destroy'])->name('artikel.delete');
 
         Route::resource('/back-office/contact', \App\Http\Controllers\Admin\ContactController::class);
         Route::get('/back-office/contact/{id}/delete', [\App\Http\Controllers\Admin\ContactController::class , 'destroy'])->name('contact.delete');

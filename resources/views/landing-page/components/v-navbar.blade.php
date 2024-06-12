@@ -28,6 +28,8 @@
                         data-translate="Home">{{ GoogleTranslate::trans('Home', \App::getLocale()) }}</a>
                     <a href="{{ route('about', app()->getLocale()) }}" class="nav-item nav-link {{ Route::currentRouteName() == 'about' ? 'active' : '' }}"
                         data-translate="About">{{ GoogleTranslate::trans('About', \App::getLocale()) }}</a>
+                    <a href="{{ route('article', app()->getLocale()) }}" class="nav-item nav-link {{ Route::currentRouteName() == 'article' ? 'active' : '' }}"
+                        data-translate="Article">{{ GoogleTranslate::trans('Article', \App::getLocale()) }}</a>
                     <a href="{{ route('service', app()->getLocale()) }}" class="nav-item nav-link {{ Route::currentRouteName() == 'service' ? 'active' : '' }}"
                         data-translate="Service">{{ GoogleTranslate::trans('Service', \App::getLocale()) }}</a>
                         <a href="{{ route('contact', app()->getLocale()) }}" class="nav-item nav-link {{ Route::currentRouteName() == 'contact' ? 'active' : '' }}"
