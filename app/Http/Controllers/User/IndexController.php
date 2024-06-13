@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutModel;
+use App\Models\ArtikelModel;
 use App\Models\CarouselModel;
 use App\Models\ClientModel;
 use App\Models\ContactModel;
@@ -16,6 +17,7 @@ class IndexController extends Controller
     public function index(){
         $carousel = CarouselModel::latest()->get();
         $client = ClientModel::latest()->get();
+        $article = ArtikelModel::latest()->paginate(3);
         $service = ServiceModel::latest()->paginate(6);
         $about = AboutModel::with('misi')->first();
         $contact = ContactModel::first();
@@ -24,6 +26,7 @@ class IndexController extends Controller
             "carousel"=> $carousel,
             "about"=> $about,
             "service"=> $service,
+            "article"=> $article,
             "client"=> $client,
             "contact"=> $contact,
             "director"=> $director,

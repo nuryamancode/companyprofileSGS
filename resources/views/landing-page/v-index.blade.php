@@ -23,16 +23,19 @@
                             alt="Slide {{ $key }}">
                         <div class="carousel-caption">
                             <div class="container carousel-content mt-5">
-                                <h1 class="text-white display-1 mb-4 mt-5 animated fadeInRight">{{ GoogleTranslate::trans($item->judul,\App::getLocale()) }}</h1>
+                                <h1 class="text-white display-1 mb-4 mt-5 animated fadeInRight">
+                                    {{ GoogleTranslate::trans($item->judul, \App::getLocale()) }}</h1>
                                 @if ($item->isbutton == 1)
                                     <p class="mb-4 text-white fs-5 animated fadeInDown d-inline-block text-truncate"
-                                        style="max-width: 100%;">{{ GoogleTranslate::trans($item->description,\App::getLocale()) }}</p>
+                                        style="max-width: 100%;">
+                                        {{ GoogleTranslate::trans($item->description, \App::getLocale()) }}</p>
                                 @else
-                                    <p class="mb-4 text-white fs-5 animated fadeInDown">{{ GoogleTranslate::trans($item->description,\App::getLocale()) }}</p>
+                                    <p class="mb-4 text-white fs-5 animated fadeInDown">
+                                        {{ GoogleTranslate::trans($item->description, \App::getLocale()) }}</p>
                                 @endif
                                 @if ($item->isbutton == 1)
                                     <a href="{{ route('detail', $item->id) }}" class="me-2"><button type="button"
-                                            class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">{{ GoogleTranslate::trans('Read More',\App::getLocale()) }}</button></a>
+                                            class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">{{ GoogleTranslate::trans('Read More', \App::getLocale()) }}</button></a>
                                 @endif
                             </div>
                         </div>
@@ -65,21 +68,22 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
-                    <h5 class="text-primary">{{ GoogleTranslate::trans('About Company',\App::getLocale()) }}</h5>
-                    <h1 class="mb-4">{{ GoogleTranslate::trans($about->judul,\App::getLocale()) }}</h1>
-                    <p>{{ GoogleTranslate::trans($about->description,\App::getLocale()) }}</p>
-                    <h1 class="mb-4">{{ GoogleTranslate::trans('Vision & Mission Company',\App::getLocale()) }}</h1>
-                    <h5 class="text-secondary">{{ GoogleTranslate::trans('Vision',\App::getLocale()) }}</h5>
-                    <p class="mb-4">{{ GoogleTranslate::trans($about->visi,\App::getLocale()) }}</p>
-                    <h5 class="text-danger">{{ GoogleTranslate::trans('Mission',\App::getLocale()) }}</h5>
+                    <h5 class="text-primary">{{ GoogleTranslate::trans('About Company', \App::getLocale()) }}</h5>
+                    <h1 class="mb-4">{{ GoogleTranslate::trans($about->judul, \App::getLocale()) }}</h1>
+                    <p>{{ GoogleTranslate::trans($about->description, \App::getLocale()) }}</p>
+                    <h1 class="mb-4">{{ GoogleTranslate::trans('Vision & Mission Company', \App::getLocale()) }}</h1>
+                    <h5 class="text-secondary">{{ GoogleTranslate::trans('Vision', \App::getLocale()) }}</h5>
+                    <p class="mb-4">{{ GoogleTranslate::trans($about->visi, \App::getLocale()) }}</p>
+                    <h5 class="text-danger">{{ GoogleTranslate::trans('Mission', \App::getLocale()) }}</h5>
                     <p>
                     <ol>
                         @foreach ($about->misi as $item)
-                            <li>{{ GoogleTranslate::trans($item->text,\App::getLocale()) }}</li>
+                            <li>{{ GoogleTranslate::trans($item->text, \App::getLocale()) }}</li>
                         @endforeach
                     </ol>
                     </p>
-                    <a href="{{ route('about') }}" class="btn btn-secondary rounded-pill px-5 py-3 text-white">{{ GoogleTranslate::trans('More Details',\App::getLocale()) }}</a>
+                    <a href="{{ route('about') }}"
+                        class="btn btn-secondary rounded-pill px-5 py-3 text-white">{{ GoogleTranslate::trans('More Details', \App::getLocale()) }}</a>
                 </div>
             </div>
         </div>
@@ -91,14 +95,14 @@
     <div class="container-fluid project py-5 mb-5">
         <div class="container">
             <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                <h5 class="text-primary">{{ GoogleTranslate::trans('Our Service',\App::getLocale()) }}</h5>
+                <h5 class="text-primary">{{ GoogleTranslate::trans('Our Service', \App::getLocale()) }}</h5>
             </div>
             <div class="row g-5">
                 @foreach ($service as $item)
                     <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
                         <div class="">
                             <a href="{{ route('service.detail', $item->id) }}" class="text-center">
-                                <h4 class="text-primary">{{ GoogleTranslate::trans($item->judul,\App::getLocale()) }}</h4>
+                                <h4 class="text-primary">{{ GoogleTranslate::trans($item->judul, \App::getLocale()) }}</h4>
                             </a>
                         </div>
                         <div class="project-item">
@@ -113,18 +117,52 @@
                 @endforeach
             </div>
             <div class="text-center mt-3 mb-4">
-                <a href="{{ route('service') }}" class="btn btn-secondary rounded-pill px-5 py-3 text-white">{{ GoogleTranslate::trans('More Details',\App::getLocale()) }}</a>
+                <a href="{{ route('service') }}"
+                    class="btn btn-secondary rounded-pill px-5 py-3 text-white">{{ GoogleTranslate::trans('More Details', \App::getLocale()) }}</a>
             </div>
         </div>
     </div>
     <!-- Project End -->
 
+    <!-- Article Start -->
+    <div class="container-fluid py-5 mb-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                <h5 class="text-primary">{{ GoogleTranslate::trans('Our Article', \App::getLocale()) }}</h5>
+            </div>
+            <div class="row">
+                @foreach ($article as $articles)
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <a href="{{ route('article.detail', $articles->id) }}" class="articles">
+                                <img src="{{ asset('artikel/' . $articles->foto) }}" class="card-img-top"
+                                    alt="Image of the article">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ GoogleTranslate::trans($articles->judul, \App::getLocale()) }}
+                                    </h5>
+                                    <p class="card-text">
+                                        {!! GoogleTranslate::trans(Str::limit($articles->keterangan, 100), \App::getLocale()) !!}
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <div class="text-center mt-3 mb-4">
+                <a href="{{ route('article') }}"
+                    class="btn btn-secondary rounded-pill px-5 py-3 text-white">{{ GoogleTranslate::trans('More Details', \App::getLocale()) }}</a>
+            </div>
+        </div>
+    </div>
+    <!-- Article End -->
+
     <!-- Team Start -->
     <div class="container-fluid py-5 mb-5 team">
         <div class="container">
             <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                <!--<h5 class="text-primary">{{ GoogleTranslate::trans('Our Client',\App::getLocale()) }}</h5>-->
-                <!--<h1>{{ GoogleTranslate::trans('Trusted Client',\App::getLocale()) }}</h1>-->
+                <!--<h5 class="text-primary">{{ GoogleTranslate::trans('Our Client', \App::getLocale()) }}</h5>-->
+                <!--<h1>{{ GoogleTranslate::trans('Trusted Client', \App::getLocale()) }}</h1>-->
             </div>
             <div class="owl-carousel team-carousel wow fadeIn" data-wow-delay=".5s">
                 @foreach ($client as $item)
@@ -136,7 +174,8 @@
                                         alt="">
                                 </div>
                                 <div class="team-name text-center  py-2">
-                                    <h4 class="text-uppercase">{{ GoogleTranslate::trans($item->judul,\App::getLocale()) }}</h4>
+                                    <h4 class="text-uppercase">
+                                        {{ GoogleTranslate::trans($item->judul, \App::getLocale()) }}</h4>
                                 </div>
                             </div>
                         </div>
@@ -161,8 +200,9 @@
                     </div>
                     <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn text-director" data-wow-delay=".5s">
                         <h5 class="text-white">Director</h5>
-                        <h1 class="mb-lg-4 text-white">{{ GoogleTranslate::trans($director->nama,\App::getLocale()) }}</h1>
-                        <p class="text-white">{{ GoogleTranslate::trans($director->description,\App::getLocale()) }}</p>
+                        <h1 class="mb-lg-4 text-white">{{ GoogleTranslate::trans($director->nama, \App::getLocale()) }}
+                        </h1>
+                        <p class="text-white">{{ GoogleTranslate::trans($director->description, \App::getLocale()) }}</p>
                     </div>
                 </div>
             </div>

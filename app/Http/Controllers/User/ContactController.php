@@ -42,7 +42,7 @@ class ContactController extends Controller
         ];
 
         // Kirim email
-        Mail::to('nuryamaniqbal@gmail.com')->send(new ContactMail($details));
+        Mail::to('sgsglobalconsultant@gmail.com')->send(new ContactMail($details));
         return back()->with('success', 'Message done sent. Thank you!');
     }
 }
