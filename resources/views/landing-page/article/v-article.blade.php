@@ -10,10 +10,7 @@
             background-size: cover;
         }
         .articles{
-            color: rgba(0, 0, 0, 0.396);
-        }
-        .articles:hover{
-            color: rgb(0, 0, 0);
+            color: rgba(0, 0, 0, 0);
         }
     </style>
     <!-- Page Header Start -->
@@ -45,11 +42,12 @@
                                 <img src="{{ asset('artikel/' . $articles->foto) }}" class="img-fluid w-100 rounded-top"
                                     alt="">
                                 <div class="blog-content mt-4 position-relative px-3" style="margin-top: -25px;">
+                                    <div class="text-center"></div>
                                     <span
                                         class="text-secondary text-center">{{ $articles->created_at->format('d M Y') }}</span>
                                     <h5 class="">{{ GoogleTranslate::trans($articles->judul, \App::getLocale()) }}
                                     </h5>
-                                    <p class="py-2">
+                                    <p class="">
                                         {!! GoogleTranslate::trans(Str::limit($articles->keterangan, 500), \App::getLocale()) !!}
                                     </p>
                                 </div>

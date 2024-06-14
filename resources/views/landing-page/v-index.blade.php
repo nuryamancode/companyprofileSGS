@@ -1,6 +1,12 @@
 @extends('landing-page.base.v-app', ['title' => 'Home'])
 
 @section('content')
+    <style>
+        .articles {
+            color: rgba(0, 0, 0, 0);
+        }
+
+    </style>
     <!-- Spinner Start -->
     <div id="spinner"
         class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
