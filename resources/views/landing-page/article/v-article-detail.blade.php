@@ -32,6 +32,7 @@
                 <div class="col wow fadeIn" data-wow-delay=".3s">
                     <div class="">
                         <h4>{!! GoogleTranslate::trans($data->judul2,\App::getLocale()) !!}</h4>
+                        <small>{{ $data->created_at->format('d M Y') }}</small>
                         <p class="mt-2">{!! GoogleTranslate::trans($data->keterangan,\App::getLocale()) !!}</p>
                     </div>
                 </div>

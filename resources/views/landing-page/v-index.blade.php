@@ -124,8 +124,47 @@
     </div>
     <!-- Project End -->
 
-    <!-- Article Start -->
-    <div class="container-fluid py-5 mb-5">
+    <!-- Blog Start -->
+    <div class="container-fluid blog py-5 mb-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                <h5 class="text-primary">{{ GoogleTranslate::trans('Our Article', \App::getLocale()) }}</h5>
+            </div>
+            <div class="row g-5 justify-content-center">
+                @foreach ($article as $articles)
+                    <div class="col-lg-6 col-xl-4 wow fadeIn" data-wow-delay=".3s">
+                        <a href="{{ route('article.detail', $articles->id) }}" class="articles">
+                            <div class="blog-item position-relative bg-light rounded">
+                                <img src="{{ asset('artikel/' . $articles->foto) }}" class="img-fluid w-100 rounded-top"
+                                    alt="">
+                                <div class="blog-content mt-4 position-relative px-3" style="margin-top: -25px;">
+                                    <span
+                                        class="text-secondary text-center">{{ $articles->created_at->format('d M Y') }}</span>
+                                    <h5 class="">{{ GoogleTranslate::trans($articles->judul, \App::getLocale()) }}
+                                    </h5>
+                                    <p class="py-2">
+                                        {!! GoogleTranslate::trans(Str::limit($articles->keterangan, 500), \App::getLocale()) !!}
+                                    </p>
+                                </div>
+                                <div
+                                    class="blog-coment d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+            <div class="text-center mt-3 mb-4">
+                <a href="{{ route('article') }}"
+                    class="btn btn-secondary rounded-pill px-5 py-3 text-white">{{ GoogleTranslate::trans('More Details', \App::getLocale()) }}</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Blog End -->
+    {{--  <!-- Article Start -->
+    <div class="container-fluid  py-5 mb-5">
         <div class="container">
             <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
                 <h5 class="text-primary">{{ GoogleTranslate::trans('Our Article', \App::getLocale()) }}</h5>
@@ -133,11 +172,11 @@
             <div class="row">
                 @foreach ($article as $articles)
                     <div class="col-md-4 mb-4">
-                        <div class="card h-100">
+                        <div class="sectiom h-100">
                             <a href="{{ route('article.detail', $articles->id) }}" class="articles">
                                 <img src="{{ asset('artikel/' . $articles->foto) }}" class="card-img-top"
                                     alt="Image of the article">
-                                <div class="card-body">
+                                <div class="section-body">
                                     <h5 class="card-title">{{ GoogleTranslate::trans($articles->judul, \App::getLocale()) }}
                                     </h5>
                                     <p class="card-text">
@@ -155,7 +194,7 @@
             </div>
         </div>
     </div>
-    <!-- Article End -->
+    <!-- Article End -->  --}}
 
     <!-- Team Start -->
     <div class="container-fluid py-5 mb-5 team">

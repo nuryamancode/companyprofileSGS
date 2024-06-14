@@ -17,6 +17,9 @@
                     <a href="{{route('about')}}" class="mb-2 text-white"><i class="fas fa-angle-right text-primary me-2"></i>
                         {{ GoogleTranslate::trans('About Company',\App::getLocale()) }}
                     </a>
+                    <a href="{{route('article')}}" class="mb-2 text-white"><i class="fas fa-angle-right text-primary me-2"></i>
+                        {{ GoogleTranslate::trans('Article Company',\App::getLocale()) }}
+                    </a>
                     <a href="{{route('service')}}" class="mb-2 text-white"><i class="fas fa-angle-right text-primary me-2"></i>
                         {{ GoogleTranslate::trans('Services Company',\App::getLocale()) }}
                     </a>
